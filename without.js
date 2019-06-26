@@ -31,10 +31,11 @@ const without = function(array1, array2) {
   for (let i = 0; i < newArray.length; i++) {
     if (array2.includes(newArray[i])) {
       newArray.splice(i, 1);
+      i--;
     }
   }
   return newArray;
 };
 
-console.log(without([1, 2, 3], [1]));
+console.log(without([1, 2, 3], [1, 2]));
 console.log(without(["1", "2", "3"], [1, 2, "3"]));
