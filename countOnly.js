@@ -14,18 +14,18 @@ const countOnly = function(allItems, itemsToCount) {
   
   const output = {};
 
-for (const check in itemsToCount) {
+for (const key in itemsToCount) {
   let count = 0;
 
-  for (const item of allItems) {
-    if (check === item) {
+  for (const name of allItems) {
+    if (key === name) {
       count++;
     }
   }
   if (count === 0) {
     count = undefined;
   }
-    output[check] = count
+    output[key] = count
 }
   return output;
 };
